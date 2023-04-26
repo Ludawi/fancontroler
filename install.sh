@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 
 set -x
 wget -q --spider http://github.com
@@ -13,7 +12,7 @@ echo " installing packages. "
 
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y systemd python3 pip git
+apt-get install -y systemd python3 python3-pip git
 
 pip install rpi.gpio python-time
 
