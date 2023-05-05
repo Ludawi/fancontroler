@@ -1,15 +1,35 @@
 #!/usr/bin/python3
+
 import RPi.GPIO as GPIO
 import time
-# die GPIOS koennen über die PINNummer oder die GPIONummer
-# angesprochen werden
-GPIO.setmode(GPIO.BCM)# hier GPIO-Nummer
-GPIO.setup(23, GPIO.OUT)
-interval_in_s = 120.0
-while(True):
-  print("on")
-  GPIO.output(23, GPIO.HIGH)
-  time.sleep(interval_in_s)# sleep interval in Sekunden
-  print("off")
-  GPIO.output(23, GPIO.LOW)
-  time.sleep(interval_in_s)
+import smbus2
+import bme280
+
+# Requires: 'adafruit-circuitpython-bme280' from pip
+TEMPERATURE = 23
+port = 1
+address = 0x77
+bus = smbus2.SMBus(port)
+calibration_params = bme280.load_calibration_params(bus, address)
+fanPin = 23
+
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(fanPin, GPIO.OUT)
+check_interval = 1.0 # Seconds
+
+def on():
+    GPIO.output(fanPin, 1)
+
+def on():
+    GPIO.output(fanPin, 0)
+
+while True:
+    sensorTemperature = data = bme280.sample(bus, address, calibration_params).temperature
+
+    if sensorTemperature > TEMPERATURE:
+        on()
+    else:
+        off()
+
+time.sleep(check_interval)
