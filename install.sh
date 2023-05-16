@@ -35,7 +35,7 @@ systemctl start fan.service
 service=systemctl is-active -q --quiet fan.service
 
 if [ $service == 0 ]
-then # How does this work?
+then
   echo " [ WARNING ] Error while running the service."
   echo " [ WARNING ] Service installed and NOT enabled."
 elif [ $service == 1 ] 
