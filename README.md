@@ -100,4 +100,4 @@ Für die Vernetzung der Komponenten orientierten wir uns am [Datenblatt](https:/
 
 Die Verkabelung unserer Elektronik nahmen wir folgendermaßen vor:
 
-# ![](media/911f959b60243be75b38d03282db1d88.jpeg)
+# ![](911f959b60243be75b38d03282db1d88.jpeg)
