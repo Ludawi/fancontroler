@@ -82,7 +82,7 @@ Dazu wurde die Datei /etc/dhcpcd.conf entsprechend bearbeitet.
 
 Aufgrund von Problemen den Raspberry Pi ins WLAN zu bringen entschieden wir uns dafür die Programmierung kongruent mit dem Setup des Raspberry Pis zu starten.
 
-Hierfür teilten wir die Gruppe auf. Amine und Luka übernahmen die Programmierung. Während Erik und [redacted] sich mit dem Setup des Raspberry Pis beschäftigen. Vince unterstützte beide Gruppen und übernahm das Projektmanagement.
+Hierfür teilten wir die Gruppe auf. Amine und Luka übernahmen die Programmierung. Während [redacted] und [redacted] sich mit dem Setup des Raspberry Pis beschäftigen. Vince unterstützte beide Gruppen und übernahm das Projektmanagement.
 
 Im Zuge der Programmierung wurden drei Dokumente produziert.
 
