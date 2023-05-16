@@ -14,7 +14,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y systemd python3 python3-pip git
 
-pip install rpi.gpio python-time
+pip install rpi.gpio python-time smbus2 bme280
 
 echo " [ OK ] Installation done, downloading script."
 
